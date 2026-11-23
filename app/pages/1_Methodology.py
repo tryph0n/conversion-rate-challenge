@@ -41,7 +41,7 @@ st.header("2. Data Overview")
 col1, col2, col3, col4 = st.columns(4)
 col1.metric("Training samples", "284,580")
 col2.metric("Test samples", "31,620")
-col3.metric("Original features", "6")
+col3.metric("Original features", "5")
 col4.metric("Conversion rate", "3.2 %")
 
 st.markdown("**Imbalance ratio:** approximately 30:1 (negative to positive).")
@@ -140,7 +140,7 @@ engineered_table = pd.DataFrame(
 
 st.table(engineered_table)
 
-st.markdown("**Total features after preprocessing:** 6 original + 7 engineered = **13 features**.")
+st.markdown("**Total features after preprocessing:** 5 original + 7 engineered = **12 features**.")
 
 # -------------------------------------------------------
 # 5. Feature Selection

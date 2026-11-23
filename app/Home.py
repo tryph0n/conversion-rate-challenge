@@ -13,7 +13,7 @@ st.title("Conversion Rate Challenge")
 st.markdown(
     """
     Machine learning project predicting newsletter subscription conversions from user behavior data.
-    Developed as a diploma defense piece and portfolio project.
+    Developed as a data science training course project and portfolio piece.
     """
 )
 
@@ -50,7 +50,7 @@ with ctx_left:
 
         - **Training samples:** 284,000 observations
         - **Positive class rate:** 3.2% (significant class imbalance)
-        - **Features:** 6 input variables capturing user behavior and demographics
+        - **Features:** 5 input variables capturing user behavior and demographics
         - **Target:** whether a user subscribes to the newsletter
 
         The goal is to maximize predictive performance on the minority class
@@ -72,4 +72,4 @@ with ctx_right:
         """
     )
 
-st.caption("Built with Streamlit | Data Science Diploma Project")
+st.caption("Built with Streamlit | Data science training course project")
