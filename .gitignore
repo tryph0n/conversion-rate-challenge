@@ -26,8 +26,6 @@ data/output/
 *.csv
 !data/.gitkeep
 
-models/*.joblib
-
 archive/
 
 .streamlit/
@@ -36,3 +34,5 @@ archive/
 *.pyc
 
 .ipynb_checkpoints/
+
+.doc/
