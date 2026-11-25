@@ -31,6 +31,13 @@ def load_metadata() -> dict:
     return joblib.load(METADATA_FILE)
 
 
+if not TRAIN_FILE.exists():
+    st.error(
+        "The Dashboard needs `data/input/conversion_data_train.csv`, which is not "
+        "included in this repository. See the README, section Data."
+    )
+    st.stop()
+
 data = load_data()
 metadata = load_metadata()
 
@@ -128,7 +135,7 @@ with tab_explore:
         },
     )
     fig_country.update_layout(yaxis_ticksuffix="%")
-    st.plotly_chart(fig_country, use_container_width=True)
+    st.plotly_chart(fig_country, width="stretch")
 
     # -- Conversion rate by source --
     st.subheader("Conversion rate by source")
@@ -150,7 +157,7 @@ with tab_explore:
         },
     )
     fig_source.update_layout(yaxis_ticksuffix="%")
-    st.plotly_chart(fig_source, use_container_width=True)
+    st.plotly_chart(fig_source, width="stretch")
 
     # -- Pages visited vs conversion (dual-axis) --
     st.subheader("Pages visited vs conversion")
@@ -193,7 +200,7 @@ with tab_explore:
         ),
         legend=dict(orientation="h", y=1.12),
     )
-    st.plotly_chart(fig_pages, use_container_width=True)
+    st.plotly_chart(fig_pages, width="stretch")
 
     # -- Age distribution --
     st.subheader("Age distribution by conversion status")
@@ -208,7 +215,7 @@ with tab_explore:
         labels={"age": "Age", "converted_label": "Status"},
         opacity=0.7,
     )
-    st.plotly_chart(fig_age, use_container_width=True)
+    st.plotly_chart(fig_age, width="stretch")
 
     # -- New user vs returning --
     st.subheader("New user vs returning -- conversion rate")
@@ -231,7 +238,7 @@ with tab_explore:
         },
     )
     fig_user.update_layout(yaxis_ticksuffix="%")
-    st.plotly_chart(fig_user, use_container_width=True)
+    st.plotly_chart(fig_user, width="stretch")
 
 # ==================================================================
 # Tab 2 -- Model Results
@@ -262,7 +269,7 @@ with tab_model:
             xaxis=dict(range=[0, 1]),
             legend=dict(orientation="h", y=1.1),
         )
-        st.plotly_chart(fig_comp, use_container_width=True)
+        st.plotly_chart(fig_comp, width="stretch")
     else:
         st.info("No model comparison data available.")
 
@@ -287,7 +294,7 @@ with tab_model:
                 "Importance": "Importance",
             },
         )
-        st.plotly_chart(fig_feat, use_container_width=True)
+        st.plotly_chart(fig_feat, width="stretch")
     else:
         st.info("No feature importance data available.")
 
