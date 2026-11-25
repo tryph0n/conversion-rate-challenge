@@ -18,8 +18,8 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/tryph0n/convertion_rate"
-Repository = "https://github.com/tryph0n/convertion_rate"
+Homepage = "https://github.com/tryph0n/conversion-rate-challenge"
+Repository = "https://github.com/tryph0n/conversion-rate-challenge"
 
 [tool.ruff]
 line-length = 100

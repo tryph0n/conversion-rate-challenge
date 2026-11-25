@@ -1,6 +1,6 @@
 # Conversion Rate Challenge
 
-[![CI](https://github.com/tryph0n/convertion_rate/actions/workflows/ci.yml/badge.svg)](https://github.com/tryph0n/convertion_rate/actions/workflows/ci.yml)
+[![CI](https://github.com/tryph0n/conversion-rate-challenge/actions/workflows/ci.yml/badge.svg)](https://github.com/tryph0n/conversion-rate-challenge/actions/workflows/ci.yml)
 
 > Binary classification to predict newsletter subscription conversions on highly imbalanced data (3.2% positive class). Includes a Jupyter notebook pipeline and a Streamlit web app.
 
@@ -31,8 +31,8 @@
 ## Installation
 
 ```bash
-git clone https://github.com/tryph0n/convertion_rate.git
-cd convertion_rate
+git clone https://github.com/tryph0n/conversion-rate-challenge.git
+cd conversion-rate-challenge
 uv sync
 ```
 
